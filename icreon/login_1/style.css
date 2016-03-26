@@ -1,0 +1,180 @@
+body {
+  background-color: #aff7f0;
+  font-size: 14px;
+  color: #333333;
+  font-family: sans-serif; }
+
+.container {
+  position: relative;
+  display: block;
+  max-width: 470px;
+  margin: 100px auto 100px; }
+  .container .title {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0 10px 40px;
+    margin: 0 0 30px;
+    line-height: 50px;
+    color: #ed2553;
+    border-left: 5px solid #ed2553;
+    text-transform: uppercase; }
+  .container .input-container {
+    position: relative;
+    margin: 0 45px 45px; }
+    .container .input-container input {
+      height: 60px;
+      width: 100%;
+      border: 0;
+      z-index: 1;
+      color: #333333;
+      font-size: 26px; }
+      .container .input-container input:valid ~ label, .container .input-container input:focus ~ label {
+        color: #a6a6a6;
+        transform: translate(0%, -50%);
+        font-size: 24px; }
+      .container .input-container input:focus {
+        outline: none; }
+        .container .input-container input:focus ~ .underline::before {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          background-color: #ed2553;
+          height: 2px; }
+    .container .input-container label {
+      position: absolute;
+      font-size: 26px;
+      line-height: 63px;
+      top: 0;
+      left: 0;
+      color: #737373;
+      font-weight: 400;
+      transition: .3s ease; }
+    .container .input-container .underline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1.5px;
+      background-color: #cccccc; }
+      .container .input-container .underline::before {
+        content: " ";
+        width: 0;
+        transition: .3s ease; }
+  .container.active .box.bottom {
+    margin: 0 15px;
+    height: 10px;
+    background-color: #f2f2f2; }
+  .container.active .box.middle {
+    margin: 0 10px;
+    background-color: #fafafa; }
+  .container.active .box.top {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 60px 0 40px;
+    overflow: hidden;
+    background-color: transparent; }
+    .container.active .box.top .add {
+      transform: scale(10); }
+      .container.active .box.top .add::before {
+        content: " "; }
+    .container.active .box.top .title,
+    .container.active .box.top .input-container,
+    .container.active .box.top .button-container {
+      visibility: visible; }
+    .container.active .box.top .title {
+      color: #fff; }
+      .container.active .box.top .title .close {
+        position: absolute;
+        color: white;
+        cursor: pointer;
+        display: inline;
+        line-height: 50px;
+        font-size: 50px;
+        right: 85px;
+        top: 0; }
+        .container.active .box.top .title .close::before {
+          content: '\00d7'; }
+
+.box {
+  position: relative;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 50px 0 40px 0;
+  box-sizing: border-box;
+  transition: .5 ease; }
+  .box.bottom {
+    margin: 0 10px;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: #f7f7f7;
+    padding: 0;
+    opacity: .8; }
+  .box.middle {
+    margin: 0px; }
+  .box.top {
+    position: absolute;
+    top: 40px;
+    right: -70px;
+    border-radius: 100%;
+    height: 140px;
+    width: 140px;
+    padding: 0; }
+    .box.top .add {
+      position: relative;
+      border-radius: 100%;
+      height: 140px;
+      width: 140px;
+      background-color: #ed2553;
+      cursor: pointer; }
+      .box.top .add::before {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        line-height: 140px;
+        font-size: 60px;
+        width: 100%;
+        content: "+"; }
+    .box.top .title,
+    .box.top .input-container,
+    .box.top .button-container {
+      visibility: hidden; }
+
+.button-container {
+  margin: 0 60px;
+  text-align: center; }
+  .button-container button {
+    width: 240px;
+    height: 70px;
+    background: transparent;
+    border: 2px solid #cccccc;
+    cursor: pointer;
+    transition: .3s ease; }
+    .button-container button span {
+      text-transform: uppercase;
+      color: #cccccc;
+      font-size: 26px;
+      transition: .3s ease; }
+    .button-container button:hover {
+      border-color: #ed2553; }
+      .button-container button:hover span {
+        color: #ed2553; }
+
+.footer {
+  padding: 30px 0 0;
+  text-align: center;
+  font-size: 24px;
+  transition: .3s ease; }
+  .footer a {
+    text-decoration: none;
+    color: #cccccc; }
+    .footer a:hover {
+      color: #999999; }
+
+/*# sourceMappingURL=style.css.map */

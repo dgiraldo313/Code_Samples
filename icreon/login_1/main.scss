@@ -1,0 +1,253 @@
+
+//colors
+
+$background: #aff7f0;
+$white: #fff;
+$black: #000;
+$red: #ed2553;
+
+
+body{
+  background-color: $background;
+  font-size: 14px;
+  color: lighten($black, 20%);
+  font-family: sans-serif;
+
+}
+
+.container{
+  position: relative;
+  display: block;
+  max-width: 470px;
+  margin: 100px auto 100px;
+
+  .title{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0 10px 40px;
+    margin: 0 0 30px;
+    line-height: 50px;
+    color: $red;
+    border-left: 5px solid $red;
+    text-transform: uppercase;
+  }
+  .input-container{
+    position: relative;
+    margin: 0 45px 45px;
+
+    input{
+      height: 60px;
+      width: 100%;
+      border: 0;
+      z-index: 1;
+      color: lighten($black, 20%);
+      font-size: 26px;
+      &:valid,
+      &:focus{
+        ~label{
+          color: lighten($black, 65%);
+          transform: translate(0%, -50%);
+          font-size: 24px;
+        }
+      }
+      &:focus{
+        outline: none;
+        ~.underline{
+          &::before{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: $red;
+            height: 2px;
+          }
+        }
+      }
+    }
+    label{
+      position: absolute;
+      font-size: 26px;
+      line-height: 63px;
+      top: 0;
+      left: 0;
+      color: lighten($black, 45%);
+      font-weight: 400;
+      transition: .3s ease;
+
+    }
+
+    .underline{
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1.5px;
+      background-color: lighten($black, 80%);
+
+      &::before{
+        content: " ";
+        width: 0;
+        transition: .3s ease;
+      }
+    }
+  }
+
+    &.active{
+      .box{
+        &.bottom{
+          margin: 0 15px;
+          height: 10px;
+          background-color: darken($white, 5%);
+        }
+        &.middle{
+          margin: 0 10px;
+          background-color: darken($white, 2%);
+        }
+        &.top{
+          position: absolute;
+          top: 20px;
+          right: 0;
+          width: 100%;
+          min-width: 100%;
+          height: auto;
+          border-radius: 5px;
+          padding: 60px 0 40px;
+          overflow: hidden;
+          background-color: transparent;
+          .add{
+            transform: scale(10);
+            &::before{
+              content: " ";
+            }
+          }
+          .title,
+          .input-container,
+          .button-container{
+            visibility: visible;
+          }
+
+          .title{
+            color: $white;
+            .close{
+              position: absolute;
+              color: white;
+              cursor: pointer;
+              display: inline;
+              line-height: 50px;
+              font-size: 50px;
+              right: 85px;
+              top: 0;
+              &::before{
+                content: '\00d7';
+
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+.box{
+  position: relative;
+  height: auto;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 50px 0 40px 0;
+  box-sizing: border-box;
+  transition: .5 ease;
+
+  &.bottom{
+    margin: 0 10px;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: darken($white, 3%);
+    padding: 0;
+    opacity: .8;
+  }
+  &.middle{
+    margin: 0px;
+
+  }
+
+
+  &.top{
+    position: absolute;
+    top:40px;
+    right: -70px;
+    border-radius: 100%;
+    height: 140px;
+    width: 140px;
+    padding: 0;
+
+    .add{
+      position: relative;
+      border-radius: 100%;
+      height: 140px;
+      width: 140px;
+      background-color: $red;
+      cursor: pointer;
+      &::before{
+        display: inline-block;
+        color: $white;
+        text-align: center;
+        line-height: 140px;
+        font-size: 60px;
+        width: 100%;
+        content: "+";
+
+      }
+    }
+
+    .title,
+    .input-container,
+    .button-container{
+      visibility: hidden;
+    }
+
+  }
+
+}
+
+.button-container{
+  margin: 0 60px;
+  text-align: center;
+
+  button{
+    width: 240px;
+    height: 70px;
+    background: transparent;
+    border: 2px solid lighten($black, 80%);
+    cursor: pointer;
+    transition: .3s ease;
+
+    span{
+      text-transform: uppercase;
+      color: lighten($black, 80%);
+      font-size: 26px;
+      transition: .3s ease;
+    }
+
+    &:hover{
+      border-color: $red;
+      span{
+        color: $red;
+      }
+    }
+  }
+}
+
+.footer{
+  padding: 30px 0 0;
+  text-align: center;
+  font-size: 24px;
+  transition: .3s ease;
+  a{
+    text-decoration: none;
+    color: lighten($black, 80%);
+    &:hover{
+      color: lighten($black, 60%);
+    }
+  }
+}
