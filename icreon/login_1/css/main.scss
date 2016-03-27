@@ -24,10 +24,10 @@ body{
   .title{
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 30px;
     padding: 10px 0 10px 40px;
     margin: 0 0 30px;
-    line-height: 50px;
+    line-height: 30px;
     color: $red;
     border-left: 5px solid $red;
     text-transform: uppercase;
@@ -113,9 +113,11 @@ body{
           border-radius: 5px;
           padding: 60px 0 40px;
           overflow: hidden;
-          background-color: transparent;
           .add{
             transform: scale(10);
+            position: absolute;
+            transition: transform .3s ease;
+
             &::before{
               content: " ";
             }
@@ -128,20 +130,74 @@ body{
 
           .title{
             color: $white;
+            position: relative;
+            border-left: 5px solid $white;
+            transition: .3s ease;
             .close{
               position: absolute;
               color: white;
               cursor: pointer;
               display: inline;
-              line-height: 50px;
+              line-height: 40px;
               font-size: 50px;
               right: 85px;
               top: 0;
+              transition: .3s ease;
               &::before{
                 content: '\00d7';
 
               }
             }
+          }
+          .input-container{
+            input{
+              background-color: transparent;
+              color: darken($white, 20%);
+              &:focus{
+                ~.underline{
+                  &::before{
+                    background-color: $white;
+                  }
+                }
+
+              }
+
+            }
+            label{
+              color: $white;
+            }
+            .underline{
+              background-color: darken($white, 20%);
+            }
+          }
+          .button-container{
+            position: relative;
+            button{
+              background-color: $white;
+              border-color: $red;
+              span{
+                color: $red;
+              }
+            }
+          }
+          .title {
+            transition-delay: .3s;
+          }
+
+          .input-container {
+            transition-delay: .4s;
+
+            &:nth-child(2) {
+              transition-delay: .5s;
+            }
+
+            &:nth-child(3) {
+              transition-delay: .6s;
+            }
+          }
+
+          .button-container {
+            transition-delay: .7s;
           }
 
         }
@@ -156,7 +212,7 @@ body{
   border-radius: 5px;
   padding: 50px 0 40px 0;
   box-sizing: border-box;
-  transition: .5 ease;
+  transition: .3s ease;
 
   &.bottom{
     margin: 0 10px;
@@ -180,14 +236,22 @@ body{
     height: 140px;
     width: 140px;
     padding: 0;
+    background-color: transparent;
+    transition: .3s ease;
+
 
     .add{
       position: relative;
+      top:0px;
+      right: 0px;
       border-radius: 100%;
       height: 140px;
       width: 140px;
+      box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
       background-color: $red;
       cursor: pointer;
+
+
       &::before{
         display: inline-block;
         color: $white;
