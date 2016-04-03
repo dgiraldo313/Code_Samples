@@ -1,0 +1,217 @@
+body {
+  background-color: #aff7f0;
+  font-family: Roboto, sans-serif;
+  overflow: hidden; }
+
+.container {
+  position: relative;
+  width: 280px;
+  height: 500px;
+  margin: 60px auto; }
+  .container .box {
+    width: 100%;
+    height: 100%;
+    background-color: #5e2e91;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+    box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7); }
+    .container .box .main-content {
+      width: 100%; }
+      .container .box .main-content .header {
+        position: relative;
+        z-index: 5;
+        height: 50px;
+        background-color: #5e2e91;
+        -webkit-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+        -moz-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+        box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+        -moz-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease; }
+        .container .box .main-content .header .burger {
+          width: 25px;
+          height: 17px;
+          display: inline-block;
+          margin: 17px;
+          transition-delay: .3s; }
+          .container .box .main-content .header .burger::before {
+            border-bottom: 10px double white;
+            border-top: 3px solid white;
+            content: "";
+            height: 4px;
+            position: absolute;
+            width: 25px; }
+        .container .box .main-content .header .title {
+          position: absolute;
+          font-weight: 100;
+          display: inline;
+          color: #ffffff;
+          margin: 17px 0;
+          transition-delay: .3s; }
+        .container .box .main-content .header .search {
+          display: inline-block;
+          margin: 15px;
+          width: 20px;
+          float: right;
+          color: #ffffff;
+          outline: 0;
+          transition-delay: .3s; }
+          .container .box .main-content .header .search::before {
+            content: "\01F50D"; }
+      .container .box .main-content .logo {
+        position: relative;
+        top: 30px;
+        margin: auto;
+        height: 80px;
+        width: 80px;
+        background: url("../img/logo.png") no-repeat center;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .container .box .main-content .logo.up {
+          top: 0px; }
+        .container .box .main-content .logo.hidden {
+          opacity: 0; }
+      .container .box .main-content .button-container {
+        position: absolute;
+        height: 50px;
+        margin: auto;
+        bottom: 90px; }
+        .container .box .main-content .button-container .sign-up, .container .box .main-content .button-container button {
+          width: 120px;
+          height: 50px;
+          margin: auto;
+          line-height: 50px;
+          text-align: center;
+          background-color: #ffffff;
+          color: #5e2e91;
+          font-size: 20px;
+          font-weight: 400;
+          cursor: pointer;
+          border-radius: 30px;
+          -moz-transition: 0.5s;
+          -o-transition: 0.5s;
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
+          .container .box .main-content .button-container .sign-up.expand, .container .box .main-content .button-container button.expand {
+            width: 200px;
+            border-radius: 5px; }
+        .container .box .main-content .button-container form {
+          position: relative;
+          top: -250px;
+          width: 90%;
+          height: 250px;
+          margin: auto;
+          background-color: #ffffff;
+          border-radius: 5px;
+          text-align: center;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          -webkit-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+          -moz-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+          box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7); }
+          .container .box .main-content .button-container form.hidden {
+            height: 0px; }
+          .container .box .main-content .button-container form input {
+            display: inline-block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 15px 0;
+            outline: 0;
+            border-width: 0 0 1px;
+            font-size: 15px;
+            -moz-transition: 0.3s;
+            -o-transition: 0.3s;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            transition-delay: .1s; }
+        .container .box .main-content .button-container button {
+          position: absolute;
+          background-color: #14ffb5;
+          border: 0;
+          outline: 0;
+          -moz-transition: top left 0.3s;
+          -o-transition: top left 0.3s;
+          -webkit-transition: top left 0.3s;
+          transition: top left 0.3s;
+          -webkit-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+          -moz-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+          box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+          transition-delay: .3s; }
+          .container .box .main-content .button-container button.done {
+            top: 25px;
+            left: 80px; }
+          .container .box .main-content .button-container button.add {
+            z-index: 5;
+            right: 10px;
+            bottom: -80px;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            transition-delay: 0s; }
+            .container .box .main-content .button-container button.add span.text {
+              display: none; }
+            .container .box .main-content .button-container button.add::before {
+              line-height: 50px;
+              width: 100%;
+              color: #ffffff;
+              content: "+"; }
+          .container .box .main-content .button-container button.hidden {
+            width: 0px; }
+            .container .box .main-content .button-container button.hidden span.text {
+              color: #14ffb5; }
+          .container .box .main-content .button-container button span.text {
+            transition-delay: .4s;
+            color: #ffffff; }
+      .container .box .main-content .feed {
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        z-index: 1;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+        .container .box .main-content .feed.hidden {
+          height: 0px; }
+        .container .box .main-content .feed .feed-container {
+          padding: 70px 20px 0; }
+          .container .box .main-content .feed .feed-container .item-container .item {
+            margin-bottom: 10px; }
+            .container .box .main-content .feed .feed-container .item-container .item:nth-child(2) .circle {
+              background-color: #ff4c81; }
+            .container .box .main-content .feed .feed-container .item-container .item:nth-child(3) .circle {
+              background-color: #f9ed46; }
+            .container .box .main-content .feed .feed-container .item-container .item:nth-child(4) .circle {
+              background-color: #47bdf9; }
+            .container .box .main-content .feed .feed-container .item-container .item:nth-child(5) .circle {
+              background-color: #f9ed46; }
+            .container .box .main-content .feed .feed-container .item-container .item:nth-child(6) .circle {
+              background-color: #ff4c81; }
+            .container .box .main-content .feed .feed-container .item-container .item .circle {
+              width: 60px;
+              height: 60px;
+              border-radius: 100%;
+              background-color: red;
+              display: inline-block;
+              -webkit-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+              -moz-box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7);
+              box-shadow: 0px 1px 5px 0px rgba(77, 77, 77, 0.7); }
+            .container .box .main-content .feed .feed-container .item-container .item .content {
+              position: absolute;
+              display: inline;
+              float: right;
+              margin: 10px;
+              color: gray; }
+
+.hidden {
+  visibility: hidden; }
+
+/*# sourceMappingURL=style.css.map */
