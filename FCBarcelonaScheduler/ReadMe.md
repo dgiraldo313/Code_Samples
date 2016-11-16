@@ -1,0 +1,1 @@
+Node.js program that gets FC Barcelona (my favorite soccer team) season details and displays it on the command line. The reason I decided to build this was to learn more about Node.js and also because it allows me to stay updated on game results and upcoming games!
